@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block title %}National Operational Councils{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-r from-orange-600 via-yellow-500 to-pink-400 py-20 px-4 text-white overflow-hidden">
+  <div class="max-w-5xl mx-auto text-center z-10 relative">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 animate-fadeInDown">National Operational Councils</h1>
+    <p class="text-lg md:text-xl mb-8 animate-fadeInUp max-w-3xl mx-auto leading-relaxed">
+      Connecting Africa Digital Inclusion Alliance’s operational chambers with national bodies, ministries, and regulatory authorities shaping ICT development and digital policies across African nations.
+    </p>
+    <a href="#about" class="bg-white text-orange-600 font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-gray-100 transition duration-300 animate-bounce">
+      Explore More
+    </a>
+  </div>
+  <!-- Decorative SVG Waves -->
+  <svg class="absolute bottom-0 left-0 w-full h-40" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#ffffff" fill-opacity="0.2" d="M0,64L48,80C96,96,192,128,288,138.7C384,149,480,139,576,138.7C672,139,768,149,864,160C960,171,1056,181,1152,181.3C1248,181,1344,171,1392,166.7L1440,162L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+  </svg>
+</section>
+
+<!-- About the Operational Councils -->
+<section id="about" class="max-w-5xl mx-auto py-16 px-6 bg-white rounded-lg shadow-lg my-10">
+  <h2 class="text-3xl md:text-4xl font-semibold mb-6 text-center text-orange-600">About the National Operational Councils</h2>
+  <p class="text-gray-700 mb-8 text-lg leading-relaxed text-center px-4 max-w-3xl mx-auto">
+    These councils serve as vital links between the Africa Digital Inclusion Alliance’s operational chambers and the key bodies responsible for ICT development, regulation, and policy-making within African nations. They foster collaboration with ministries, local authorities, and industry regulators to advance digital inclusion at the national level.
+  </p>
+  <div class="text-center">
+    <a href="#participate" class="bg-orange-600 text-white font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-orange-500 transition duration-300">
+      Join the Network
+    </a>
+  </div>
+</section>
+
+<!-- Key Connections & Bodies -->
+<section class="max-w-7xl mx-auto py-16 px-6">
+  <h3 class="text-2xl md:text-3xl font-semibold mb-10 text-center text-orange-600">Key Bodies & Strategic Connections</h3>
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- Example Body Card -->
+    <div class="bg-white rounded-xl shadow-lg p-6 hover:scale-105 transition-transform duration-300 hover:shadow-xl">
+      <h4 class="text-xl font-semibold mb-2 text-orange-500 border-b-2 border-orange-300 pb-2">Ministries of ICT</h4>
+      <p class="text-gray-600 mb-4">National bodies responsible for ICT policy, regulation, and industry growth.</p>
+      <ul class="list-disc list-inside text-gray-500 text-sm">
+        <li>Policy Formulation</li>
+        <li>Regulatory Frameworks</li>
+      </ul>
+    </div>
+    <!-- Repeat for other bodies -->
+    <div class="bg-white rounded-xl shadow-lg p-6 hover:scale-105 transition-transform duration-300 hover:shadow-xl">
+      <h4 class="text-xl font-semibold mb-2 text-orange-500 border-b-2 border-orange-300 pb-2">Local Government Authorities</h4>
+      <p class="text-gray-600 mb-4">Regional and local bodies influencing digital infrastructure and inclusion policies.</p>
+      <ul class="list-disc list-inside text-gray-500 text-sm">
+        <li>Regional ICT Agencies</li>
+        <li>Municipal IT Departments</li>
+      </ul>
+    </div>
+    <div class="bg-white rounded-xl shadow-lg p-6 hover:scale-105 transition-transform duration-300 hover:shadow-xl">
+      <h4 class="text-xl font-semibold mb-2 text-orange-500 border-b-2 border-orange-300 pb-2">Industry Regulators</h4>
+      <p class="text-gray-600 mb-4">Bodies overseeing ICT industry standards, licensing, and compliance.</p>
+      <ul class="list-disc list-inside text-gray-500 text-sm">
+        <li>Communications Commissions</li>
+        <li>Telecom Regulatory Authorities</li>
+      </ul>
+    </div>
+    <!-- Add more as needed -->
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-600 py-16 px-4 text-white text-center">
+  <h2 class="text-3xl font-semibold mb-4">Empower Your Nation’s Digital Future</h2>
+  <p class="mb-8 text-lg max-w-3xl mx-auto">
+    Connect with national ICT bodies, regulators, and local authorities to drive impactful digital inclusion policies and initiatives. Join us to shape Africa’s ICT landscape.
+  </p>
+  <a href="#register" class="bg-white text-indigo-600 font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-gray-100 transition duration-300 animate-bounce">
+    Get Started
+  </a>
+</section>
+
+{% endblock %}

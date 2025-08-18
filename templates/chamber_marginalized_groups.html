@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+
+{% block title %}Chamber of Marginalized Groups{% endblock %}
+
+{% block content %}
+<!-- Header with animated title -->
+<section class="py-16 bg-gradient-to-r from-purple-100 via-pink-100 to-blue-100 overflow-hidden">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <h1 class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-600 via-pink-500 to-blue-600 animate-fade-in-up mb-8">
+      CHAMBER OF MARGINALIZED GROUPS INCLUSION
+    </h1>
+  </div>
+</section>
+
+<!-- About Section with image and text (split layout) -->
+<section class="bg-white py-12 px-4 md:px-16">
+  <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-8">
+    <!-- Image side -->
+    <div class="md:w-1/2 animate-fade-in-down">
+      <img src="/static/img/marginalized.jpg" alt="Chamber of Marginalized Groups" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300" />
+    </div>
+    <!-- Text side -->
+    <div class="md:w-1/2 space-y-4 text-gray-700 text-lg leading-relaxed animate-fade-in delay-200">
+      <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">ABOUT THE CHAMBER</h2>
+      <p>
+        Chamber of Marginalized Groups Inclusion acts to drive social inclusion through digital inclusion by targeting the diverse nature of populations in society. It enables the ability to learn, communicate, work, effectively socialize, and be productive irrespective of any conditional ties.
+      </p>
+      <p>
+        It caters to populations less considered in adopting and growing with various forms of technology in various contexts of needs and aspirations at individual or community levels. This helps overcome systemic, structural, historical, or cultural barriers within governance, societal norms, or for marginalized groups.
+      </p>
+      <p>
+        The chamber also aims to instill a sense of human support, self-reliance, and connectedness, reducing harmful addictive behaviors related to technology and promoting mental, emotional, and psychological growth.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Vision & Mission with animated cards -->
+<section class="py-16 bg-gradient-to-br from-green-100 via-yellow-100 to-orange-100">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800 animate-fade-in-down">
+      CHAMBER'S VISION AND MISSION
+    </h2>
+    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <!-- Vision -->
+      <div class="bg-white rounded-lg shadow-lg p-8 transform hover:scale-105 transition-transform duration-300 animate-fade-in-up">
+        <h3 class="text-2xl font-semibold mb-4 text-purple-700">VISION</h3>
+        <p>"A society where technology meets everyone where they are, when and how they need it towards a productive and healthy relational society."</p>
+      </div>
+      <!-- Mission -->
+      <div class="bg-white rounded-lg shadow-lg p-8 transform hover:scale-105 transition-transform duration-300 animate-fade-in-up delay-200">
+        <h3 class="text-2xl font-semibold mb-4 text-purple-700">MISSION</h3>
+        <p>"To build digital inclusion as a culture that thinks, considers, grows and empowers the marginalized communities for a safer society."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Operations List -->
+<section class="py-16 bg-gray-50">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800 animate-fade-in-down">
+      GENERAL OPERATIONS
+    </h2>
+    <ul class="space-y-6 list-disc list-inside text-gray-700 text-lg animate-fade-in">
+      <li><strong>Awareness & Innovation:</strong> Promoting digital security, productivity, and awareness among marginalized communities.</li>
+      <li><strong>Inclusive Culture:</strong> Leaving no one behind, regardless of psychological, mental, physical, or regional barriers.</li>
+      <li><strong>Disability Inclusion:</strong> Promoting digital solutions for various disabilities.</li>
+      <li><strong>Correctional Support:</strong> Empowering incarcerated individuals through digital programs.</li>
+      <li><strong>Digital Poverty:</strong> Overcoming digital poverty in rural and underserved areas.</li>
+      <li><strong>Development in Arid Lands:</strong> Promoting digital growth in Arid and Semi-Arid Lands.</li>
+      <li><strong>Human Services:</strong> Managing programs for digital care, protection, and support.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Divisions -->
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-600 animate-fade-in-down">
+      CHAMBER DIVISIONS
+    </h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Division Card 1 -->
+      <div class="bg-gray-100 p-6 rounded-lg shadow hover:shadow-xl transition-shadow duration-300 animate-fade-in-up">
+        <h3 class="text-xl font-semibold mb-4 text-purple-700">Division of Disability Digital Inclusion</h3>
+        <p>Focusing on digital solutions tailored for persons with disabilities.</p>
+      </div>
+      <!-- Division Card 2 -->
+      <div class="bg-gray-100 p-6 rounded-lg shadow hover:shadow-xl transition-shadow duration-300 animate-fade-in-up delay-200">
+        <h3 class="text-xl font-semibold mb-4 text-purple-700">Division of Refugees Digital Inclusion</h3>
+        <p>Supporting refugee communities with digital tools and resources.</p>
+      </div>
+      <!-- Division Card 3 -->
+      <div class="bg-gray-100 p-6 rounded-lg shadow hover:shadow-xl transition-shadow duration-300 animate-fade-in-up delay-400">
+        <h3 class="text-xl font-semibold mb-4 text-purple-700">Division of Correctional Digital Inclusion Services</h3>
+        <p>Empowering correctional institutions with digital programs.</p>
+      </div>
+      <!-- Division Card 4 -->
+      <div class="bg-gray-100 p-6 rounded-lg shadow hover:shadow-xl transition-shadow duration-300 animate-fade-in-up delay-600">
+        <h3 class="text-xl font-semibold mb-4 text-purple-700">Division of Digital Empowerment for Rurals and ASALs</h3>
+        <p>Focused on rural and arid lands digital growth.</p>
+      </div>
+      <!-- Division Card 5 -->
+      <div class="bg-gray-100 p-6 rounded-lg shadow hover:shadow-xl transition-shadow duration-300 animate-fade-in-up delay-800">
+        <h3 class="text-xl font-semibold mb-4 text-purple-700">Division of Human Digital Support Services</h3>
+        <p>Providing human-centered digital support services.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CSS Animations (embedded) -->
+<style>
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fade-in-down {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-fade-in {
+    opacity: 0;
+    animation: fade-in 1s forwards;
+  }
+  .animate-fade-in-down {
+    opacity: 0;
+    animation: fade-in-down 1s forwards;
+  }
+  .animate-fade-in-up {
+    opacity: 0;
+    animation: fade-in-up 1s forwards;
+  }
+
+  /* Delay classes for cascading effect */
+  .delay-200 { animation-delay: 0.2s; }
+  .delay-400 { animation-delay: 0.4s; }
+  .delay-600 { animation-delay: 0.6s; }
+  .delay-800 { animation-delay: 0.8s; }
+</style>
+{% endblock %}

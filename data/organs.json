@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Africa Digital Inclusion Diaspora Network",
+    "description": "Driven by Africa Digital Inclusion Alliance as a major organ, this network connects Africans outside the continent to contribute positively to digital development in Africa. It operates across five continents with quarterly activities and an annual diaspora forum.",
+    "image": "img/Assembly.png"
+  },
+  {
+    "title": "Chamber of Skill Development",
+    "description": "Focuses on lifelong digital learning, skilling, upskilling, and reskilling for all sectors and institutions, enhancing digital literacy continent-wide.",
+    "image": "img/skill_development.jpg"
+  },
+  {
+    "title": "Chamber of Device Access & Development",
+    "description": "Promotes affordable, accessible digital devices for learning and work, fostering digital ownership.",
+    "image": "img/device_access.jpg"
+  }
+
+]

@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}ADIA{% endblock %}</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Additional CSS/Fonts here -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  </head>
+  <body class="flex flex-col min-h-screen font-sans text-gray-800">
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <!-- Header -->
+    <header class="bg-gray-900 text-white fixed top-0 w-full z-50 shadow">
+      <div class="container mx-auto px-4 flex items-center justify-between py-3">
+        <!-- Logo & Title -->
+        <a href="{{ url_for('index') }}" class="flex items-center space-x-2">
+          <img src="{{ url_for('static', filename='img/ADIA_logo.png') }}" class="h-11 w-11" alt="ADIA Logo" />
+          <h1 class="text-xl font-bold">ADIA</h1>
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex space-x-10 items-center">
+          <a href="{{ url_for('index') }}" class="hover:text-blue-400">Home</a>
+          
+          <!-- Organs -->
+           <div class="relative">
+            <!-- Trigger Button -->
+            <button class="flex items-center px-2 py-1 focus:outline-none cursor-pointer hover:text-blue-400 dropdown-toggle">
+              Organs
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <!-- Dropdown Menu -->
+            <div class="absolute left-0 bg-white text-gray-900 rounded shadow-lg mt-2 w-48 hidden">
+              <!-- Chamber 1 with submenu -->
+              <div class="relative group">
+                <a href="{{ url_for('general_assembly') }}" class="block px-4 py-2 flex justify-between items-center hover:bg-gray-100">
+                  Africa Digital Inclusion General Assembly
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <!-- Submenu -->
+                <div class="absolute left-full top-0 bg-white w-48 hidden submenu">
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">1</a>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">2</a>
+                </div>
+              </div>
+
+              <div class="relative group">
+                <a href="{{ url_for('operational') }}" class="block px-4 py-2 flex justify-between items-center hover:bg-gray-100">
+                  Africa Digital Inclusion Operational Chambers
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <!-- Submenu -->
+                <div class="absolute left-full top-0 bg-white w-48 hidden submenu">
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">1</a>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">2</a>
+                </div>
+              </div>
+
+              <div class="relative group">
+                <a href="{{ url_for('digital_councils') }}" class="block px-4 py-2 flex justify-between items-center hover:bg-gray-100">
+                  Africa Multi-sectoral Digital Councils
+                  <svg class="w-3 h-3" fill="none" stroke="currenAfrica Multi-sectoral Digital CouncilstColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <!-- Submenu -->
+                <div class="absolute left-full top-0 bg-white w-48 hidden submenu">
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">1</a>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">2</a>
+                </div>
+              </div>
+              
+               <div class="relative group">
+                <a href="{{ url_for('inclusion_councils') }}" class="block px-4 py-2 flex justify-between items-center hover:bg-gray-100">
+                  Regional Digital Inclusion Councils
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <!-- Submenu -->
+                <div class="absolute left-full top-0 bg-white w-48 hidden submenu">
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">1</a>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">2</a>
+                </div>
+              </div>
+
+               <div class="relative group">
+                <a href="{{ url_for('operational_council') }}" class="block px-4 py-2 flex justify-between items-center hover:bg-gray-100">
+                  National Operational Council
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <!-- Submenu -->
+                <div class="absolute left-full top-0 bg-white w-48 hidden submenu">
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">1</a>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">2</a>
+                </div>
+              </div>
+
+               <div class="relative group">
+                <a href="{{ url_for('center_excellence') }}" class="block px-4 py-2 flex justify-between items-center hover:bg-gray-100">
+                  Africa Digital Inclusion Centers of Excellence
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <!-- Submenu -->
+                <div class="absolute left-full top-0 bg-white w-48 hidden submenu">
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">1</a>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">2</a>
+                </div>
+              </div>
+
+               <div class="relative group">
+                <a href="{{ url_for('diaspora_network') }}" class="block px-4 py-2 flex justify-between items-center hover:bg-gray-100">
+                  Africa Digital Inclusion Diaspora Network
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <!-- Submenu -->
+                <div class="absolute left-full top-0 bg-white w-48 hidden submenu">
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">1</a>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">2</a>
+                </div>
+              </div>
+              ...
+            </div>
+          </div>
+          <a href="{{ url_for('about') }}" class="hover:text-blue-400">Centers Of Excellence</a>
+          <a href="{{ url_for('team') }}" class="hover:text-blue-400">Team</a>
+
+          <!-- Chambers Dropdown -->
+         <!-- Chambers Dropdown (Desktop & Mobile) -->
+          <div class="relative">
+            <!-- Trigger Button -->
+            <button class="flex items-center px-2 py-1 focus:outline-none cursor-pointer hover:text-blue-400 dropdown-toggle">
+              Chambers
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <!-- Dropdown Menu -->
+            <div class="absolute left-0 bg-white text-gray-900 rounded shadow-lg mt-2 w-48 hidden">
+              <!-- Chamber 1 with submenu -->
+              <div class="relative group">
+                <a href="{{ url_for('skill_development') }}" class="block px-4 py-2 flex justify-between items-center hover:bg-gray-100">
+                  Chamber of Skill Development
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <!-- Submenu -->
+                <div class="absolute left-full top-0 bg-white w-48 hidden submenu">
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">1</a>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">2</a>
+                </div>
+              </div>
+
+              <div class="relative group">
+                <a href="{{ url_for('device_access_and_development') }}" class="block px-4 py-2 flex justify-between items-center hover:bg-gray-100">
+                  Chamber of Device Access and Development
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <!-- Submenu -->
+                <div class="absolute left-full top-0 bg-white w-48 hidden submenu">
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">1</a>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">2</a>
+                </div>
+              </div>
+
+              <div class="relative group">
+                <a href="{{ url_for('technical_management') }}" class="block px-4 py-2 flex justify-between items-center hover:bg-gray-100">
+                  Chamber of Technical Management
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <!-- Submenu -->
+                <div class="absolute left-full top-0 bg-white w-48 hidden submenu">
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">1</a>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">2</a>
+                </div>
+              </div>
+              
+               <div class="relative group">
+                <a href="{{ url_for('chamber_marginalized_groups') }}" class="block px-4 py-2 flex justify-between items-center hover:bg-gray-100">
+                  Chamber of Marginalized Groups Inclusion
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <!-- Submenu -->
+                <div class="absolute left-full top-0 bg-white w-48 hidden submenu">
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">1</a>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">2</a>
+                </div>
+              </div>
+
+               <div class="relative group">
+                <a href="{{ url_for('policy_studies') }}" class="block px-4 py-2 flex justify-between items-center hover:bg-gray-100">
+                  Chamber of Policy Studies and Development
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <!-- Submenu -->
+                <div class="absolute left-full top-0 bg-white w-48 hidden submenu">
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">1</a>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">2</a>
+                </div>
+              </div>
+
+               <div class="relative group">
+                <a href="{{ url_for('digital_impact') }}" class="block px-4 py-2 flex justify-between items-center hover:bg-gray-100">
+                  Chamber of Multi-sectoral Digital Impact
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <!-- Submenu -->
+                <div class="absolute left-full top-0 bg-white w-48 hidden submenu">
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">1</a>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">2</a>
+                </div>
+              </div>
+
+               <div class="relative group">
+                <a href="{{ url_for('industry_development') }}" class="block px-4 py-2 flex justify-between items-center hover:bg-gray-100">
+                  Chamber of Digital Industry Development
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <!-- Submenu -->
+                <div class="absolute left-full top-0 bg-white w-48 hidden submenu">
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">1</a>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">2</a>
+                </div>
+              </div>
+              ...
+            </div>
+          </div>
+
+          <a href="{{ url_for('events') }}" class="hover:text-blue-400">Events</a>
+        </nav>
+
+
+        <!-- organs -->
+        <!-- Hamburger for mobile -->
+        <div class="md:hidden">
+          <button id="mobile-menu-toggle" class="focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden px-4 pb-4">
+        <a href="{{ url_for('index') }}" class="block py-2 hover:text-blue-400">Home</a>
+
+          <!-- Toggle button -->
+        <button class="mob-chambers-toggle w-full flex items-center px-2 py-2  focus:outline-none">
+          Organs
+          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        <!-- Submenu with proper styling -->
+        <div class="hidden bg-dark">
+          <!-- Chamber 1 -->
+          <div class="border-t border-gray-200">
+            <button class="mob-submenu-toggle w-full flex items-center px-4 py-2 focus:outline-none">
+              <a href="{{ url_for('general_assembly') }}" class="block py-2">Africa Digital Inclusion General Assembly</a>
+              <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+            <!-- Sub-chamber links -->
+            <div class="hidden pl-4">
+              <a href="#" class="block py-2 hover:bg-gray-100">1</a>
+              <a href="#" class="block py-2 hover:bg-gray-100">2</a>
+            </div>
+          </div>
+
+          <!-- Chamber 2 -->
+          <div class="border-t border-gray-200">
+            <button class="mob-submenu-toggle w-full flex items-center px-4 py-2 focus:outline-none">
+              <a href="{{ url_for('operational') }}" class="block py-2">Africa Digital Inclusion Operational Chambers</a>
+              <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+            <div class="hidden pl-4">
+              <a href="#" class="block py-2 hover:bg-gray-100">1</a>
+              <a href="#" class="block py-2 hover:bg-gray-100">2</a>
+            </div>
+          </div>
+
+          <!-- Chamber 3 -->
+          <div class="border-t border-gray-200">
+            <button class="mob-submenu-toggle w-full flex items-center px-4 py-2 focus:outline-none">
+              <a href="{{ url_for('digital_councils') }}" class="block py-2">Africa Multi-sectoral Digital Councils</a>
+              <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+            <div class="hidden pl-4">
+              <a href="#" class="block py-2 hover:bg-gray-100">1</a>
+              <a href="#" class="block py-2 hover:bg-gray-100">2</a>
+            </div>
+          </div>
+
+          <div class="border-t border-gray-200">
+            <button class="mob-submenu-toggle w-full flex items-center px-4 py-2 focus:outline-none">
+              <a href="{{ url_for('inclusion_councils') }}" class="block py-2">Regional Digital Inclusion Councils</a>
+              <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+            <div class="hidden pl-4">
+              <a href="#" class="block py-2 hover:bg-gray-100">1</a>
+              <a href="#" class="block py-2 hover:bg-gray-100">2</a>
+            </div>
+          </div>
+
+          <div class="border-t border-gray-200">
+            <button class="mob-submenu-toggle w-full flex items-center px-4 py-2 focus:outline-none">
+              <a href="{{ url_for('operational_council') }}" class="block py-2">National Operational Council</a>
+              <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+            <div class="hidden pl-4">
+              <a href="#" class="block py-2 hover:bg-gray-100">1</a>
+              <a href="#" class="block py-2 hover:bg-gray-100">2</a>
+            </div>
+          </div>
+
+          <div class="border-t border-gray-200">
+            <button class="mob-submenu-toggle w-full flex items-center px-4 py-2 focus:outline-none">
+              <a href="{{ url_for('center_excellence') }}" class="block py-2">Africa Digital Inclusion Centers of Excellence</a>
+              <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+            <div class="hidden pl-4">
+              <a href="#" class="block py-2 hover:bg-gray-100">1</a>
+              <a href="#" class="block py-2 hover:bg-gray-100">2</a>
+            </div>
+          </div>
+
+          <div class="border-t border-gray-200">
+            <button class="mob-submenu-toggle w-full flex items-center px-4 py-2 focus:outline-none">
+              <a href="{{ url_for('diaspora_network') }}" class="block py-2">Africa Digital Inclusion Diaspora Network</a>
+              <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+            <div class="hidden pl-4">
+              <a href="#" class="block py-2 hover:bg-gray-100">1</a>
+              <a href="#" class="block py-2 hover:bg-gray-100">2</a>
+            </div>
+          </div>
+
+        
+        </div>
+        <a href="{{ url_for('about') }}" class="block py-2 hover:text-blue-400">Centers Of Excellence</a>
+        <a href="{{ url_for('team') }}" class="block py-2 hover:text-blue-400">Team</a>
+
+       <!-- Container for mobile chambers menu -->
+      
+        <!-- Toggle button -->
+        <button class="mob-chambers-toggle w-full flex items-center px-2 py-2  focus:outline-none">
+          Chambers
+          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        <!-- Submenu with proper styling -->
+        <div class="hidden bg-dark">
+          <!-- Chamber 1 -->
+          <div class="border-t border-gray-200">
+            <button class="mob-submenu-toggle w-full flex items-center px-4 py-2 focus:outline-none">
+              <a href="{{ url_for('skill_development') }}" class="block py-2">Chamber of Skill Development</a>
+              <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+            <!-- Sub-chamber links -->
+            <div class="hidden pl-4">
+              <a href="#" class="block py-2 hover:bg-gray-100">1</a>
+              <a href="#" class="block py-2 hover:bg-gray-100">2</a>
+            </div>
+          </div>
+
+          <!-- Chamber 2 -->
+          <div class="border-t border-gray-200">
+            <button class="mob-submenu-toggle w-full flex items-center px-4 py-2 focus:outline-none">
+              <a href="{{ url_for('device_access_and_development') }}" class="block py-2">Chamber of Device Access and Development</a>
+              <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+            <div class="hidden pl-4">
+              <a href="#" class="block py-2 hover:bg-gray-100">1</a>
+              <a href="#" class="block py-2 hover:bg-gray-100">2</a>
+            </div>
+          </div>
+
+          <!-- Chamber 3 -->
+          <div class="border-t border-gray-200">
+            <button class="mob-submenu-toggle w-full flex items-center px-4 py-2 focus:outline-none">
+              <a href="{{ url_for('technical_management') }}" class="block py-2">Chamber of Technical Management</a>
+              <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+            <div class="hidden pl-4">
+              <a href="#" class="block py-2 hover:bg-gray-100">1</a>
+              <a href="#" class="block py-2 hover:bg-gray-100">2</a>
+            </div>
+          </div>
+
+          <div class="border-t border-gray-200">
+            <button class="mob-submenu-toggle w-full flex items-center px-4 py-2 focus:outline-none">
+              <a href="{{ url_for('chamber_marginalized_groups') }}" class="block py-2">Chamber of Marginalized Groups Inclusion</a>
+              <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+            <div class="hidden pl-4">
+              <a href="#" class="block py-2 hover:bg-gray-100">1</a>
+              <a href="#" class="block py-2 hover:bg-gray-100">2</a>
+            </div>
+          </div>
+
+          <div class="border-t border-gray-200">
+            <button class="mob-submenu-toggle w-full flex items-center px-4 py-2 focus:outline-none">
+              <a href="{{ url_for('policy_studies') }}" class="block py-2">Chamber of Policy Studies and Development</a>
+              <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+            <div class="hidden pl-4">
+              <a href="#" class="block py-2 hover:bg-gray-100">1</a>
+              <a href="#" class="block py-2 hover:bg-gray-100">2</a>
+            </div>
+          </div>
+
+          <div class="border-t border-gray-200">
+            <button class="mob-submenu-toggle w-full flex items-center px-4 py-2 focus:outline-none">
+              <a href="{{ url_for('digital_impact') }}" class="block py-2">Chamber of Multi-sectoral Digital Impact</a>
+              <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+            <div class="hidden pl-4">
+              <a href="#" class="block py-2 hover:bg-gray-100">1</a>
+              <a href="#" class="block py-2 hover:bg-gray-100">2</a>
+            </div>
+          </div>
+
+          <div class="border-t border-gray-200">
+            <button class="mob-submenu-toggle w-full flex items-center px-4 py-2 focus:outline-none">
+              <a href="{{ url_for('industry_development') }}" class="block py-2">Chamber of Digital Industry Development</a>
+              <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+            <div class="hidden pl-4">
+              <a href="#" class="block py-2 hover:bg-gray-100">1</a>
+              <a href="#" class="block py-2 hover:bg-gray-100">2</a>
+            </div>
+          </div>
+
+        
+        </div>
+      
+
+        <a href="{{ url_for('events') }}" class="block py-2 hover:text-blue-400">Events</a>
+      </div>
+    </header>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Toggle mobile menu
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileMenuToggle && mobileMenu) {
+      mobileMenuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    // Toggle Chambers dropdown (desktop)
+    document.querySelectorAll('.dropdown-toggle').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation(); // prevent click from bubbling
+        const menu = btn.nextElementSibling;
+        if (menu) {
+          menu.classList.toggle('hidden');
+        }
+      });
+    });
+
+    // Toggle submenu in desktop
+    document.querySelectorAll('.submenu-toggle').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const submenu = btn.nextElementSibling;
+        if (submenu) {
+          submenu.classList.toggle('hidden');
+        }
+      });
+    });
+
+    // Toggle mobile chambers submenu
+    document.querySelectorAll('.mob-chambers-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const submenu = btn.nextElementSibling;
+        if (submenu) {
+          submenu.classList.toggle('hidden');
+        }
+      });
+    });
+
+    // Toggle individual chamber submenus in mobile
+    document.querySelectorAll('.mob-submenu-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const submenu = btn.nextElementSibling;
+        if (submenu) {
+          submenu.classList.toggle('hidden');
+        }
+      });
+    });
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', () => {
+      document.querySelectorAll('.dropdown-menu, .submenu').forEach(menu => {
+        menu.classList.add('hidden');
+      });
+    });
+
+    // To prevent closing when clicking inside menus, stop propagation
+    document.querySelectorAll('.dropdown, .dropdown-toggle, .submenu, .submenu-toggle, .mob-chambers-toggle, .mob-submenu-toggle').forEach(elem => {
+      elem.addEventListener('click', (e) => {
+        e.stopPropagation();
+      });
+    });
+  });
+</script>
+    
+
+    <!-- Main Content -->
+    <main class="flex-1 pt-20">{% block content %} {% endblock %}</main>
+
+    <!-- Footer -->
+    <footer id="footer" class="mt-8">
+      <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- About / Logo -->
+        <div class="footer-section">
+          <h3>ADIA</h3>
+          <p>Promoting Digital Equity for All</p>
+          <br>
+          <div class="social-links flex space-x-4 mb-4">
+            <a
+              href="https://x.com/AdiaAfrica"
+              target="_blank"
+              aria-label="X"
+              class="fab fa-x-twitter fa-lg hover:text-blue-400"
+            ></a>
+            <a
+              href="https://web.facebook.com/profile.php?id=100092029655051"
+              target="_blank"
+              aria-label="Facebook"
+              class="fab fa-facebook-f fa-lg hover:text-blue-400"
+            ></a>
+            <a
+              href="https://www.instagram.com/adia_africa54/"
+              target="_blank"
+              aria-label="Instagram"
+              class="fab fa-instagram fa-lg hover:text-blue-400"
+            ></a>
+            <a
+              href="https://www.linkedin.com/company/africa-digital-inclusion-alliance/"
+              target="_blank"
+              aria-label="LinkedIn"
+              class="fab fa-linkedin-in fa-lg hover:text-blue-400"
+            ></a>
+          </div>
+          <p class="mt-4">&copy; 2025 ADIA. All Rights Reserved.</p>
+        </div>
+        <!-- Quick Links -->
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <a href="#about" class="block mb-2 hover:text-blue-400">About Us</a>
+          <a href="#programs" class="block mb-2 hover:text-blue-400"
+            >Programs</a
+          >
+          <a href="#impact" class="block mb-2 hover:text-blue-400">Organs</a>
+          <a href="#contact" class="block mb-2 hover:text-blue-400">Contact</a>
+          <a href="#donate" class="block mb-2 hover:text-blue-400">Donate</a>
+        </div>
+        <!-- Programs -->
+        <div class="footer-section">
+          <h3>Programs</h3>
+          <a href="#" class="block mb-2 hover:text-blue-400"
+            >Digital Literacy</a
+          >
+          <a href="#" class="block mb-2 hover:text-blue-400"
+            >Connectivity Solutions</a
+          >
+          <a href="#" class="block mb-2 hover:text-blue-400"
+            >Entrepreneurship</a
+          >
+          <a href="#" class="block mb-2 hover:text-blue-400"
+            >Youth Development</a
+          >
+        </div>
+        <!-- Contact Info -->
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <p class="mb-2">
+            <i class="fas fa-map-marker-alt"></i>Nairobi, Kenya
+          </p>
+          <p class="mb-2"><i class="fas fa-phone"></i>+254 700 123 456</p>
+          <p class="mb-2"><i class="fas fa-envelope"></i>info@adiafrica.org</p>
+          <p class="mb-2"><i class="fas fa-globe"></i>www.adiafrica.org</p>
+        </div>
+      </div>
+      <div class="border-t mt-6 pt-4">
+        &copy; 2025 Africa Digital Inclusion Alliance. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>

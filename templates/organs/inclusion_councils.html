@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block title %}Regional Digital Inclusion Councils{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-r from-green-600 via-teal-500 to-cyan-400 py-20 px-4 text-white overflow-hidden">
+  <div class="max-w-5xl mx-auto text-center z-10 relative">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 animate-fadeInDown">Regional Digital Inclusion Councils</h1>
+    <p class="text-lg md:text-xl mb-8 animate-fadeInUp max-w-3xl mx-auto leading-relaxed">
+      Comprising representatives from all five Chambers of the Africa Digital Inclusion Alliance—Skill Development, Device Access, Technical Support, Marginalized Groups Inclusion, and Broadband & Policy—these councils operate regionally to bridge the digital divide and foster collaboration with economic communities, trade blocs, and corporate partners across Africa’s seven regions.
+    </p>
+    <a href="#about" class="bg-white text-green-700 font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-gray-100 transition duration-300 animate-bounce">
+      Discover More
+    </a>
+  </div>
+  <!-- Decorative SVG Waves -->
+  <svg class="absolute bottom-0 left-0 w-full h-40" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#ffffff" fill-opacity="0.2" d="M0,64L48,80C96,96,192,128,288,138.7C384,149,480,139,576,138.7C672,139,768,149,864,160C960,171,1056,181,1152,181.3C1248,181,1344,171,1392,166.7L1440,162L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+  </svg>
+</section>
+
+<!-- About the Regional Councils -->
+<section id="about" class="max-w-5xl mx-auto py-16 px-6 bg-white rounded-lg shadow-lg my-10">
+  <h2 class="text-3xl md:text-4xl font-semibold mb-6 text-center text-green-700">About the Regional Digital Inclusion Councils</h2>
+  <p class="text-gray-700 mb-8 text-lg leading-relaxed text-center px-4 max-w-3xl mx-auto">
+    These councils bring together representatives from all five chambers of ADIA, working regionally to accelerate digital inclusion efforts. Collaborating with regional economic communities, trade blocs, and corporate partners, they aim to bridge gaps, promote regional strategies, and foster sustainable digital growth across Africa’s seven regions.
+  </p>
+  <div class="text-center">
+    <a href="#participate" class="bg-green-700 text-white font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-green-600 transition duration-300">
+      Get Involved
+    </a>
+  </div>
+</section>
+
+<!-- Regions & Member Representation -->
+<section class="max-w-7xl mx-auto py-16 px-6">
+  <h3 class="text-2xl md:text-3xl font-semibold mb-10 text-center text-green-700">Regions & Operational Committees</h3>
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- Example Region Card -->
+    <div class="bg-white rounded-xl shadow-lg p-6 hover:scale-105 transition-transform duration-300 hover:shadow-xl">
+      <h4 class="text-xl font-semibold mb-2 text-green-600 border-b-2 border-green-300 pb-2">North Africa</h4>
+      <p class="text-gray-600 mb-4">Leaders and representatives working to enhance digital access and policy alignment in North Africa.</p>
+      <ul class="list-disc list-inside text-gray-500 text-sm">
+        <li>Regional Experts</li>
+        <li>Policy Advocates</li>
+      </ul>
+    </div>
+    <!-- Repeat for other regions -->
+    <div class="bg-white rounded-xl shadow-lg p-6 hover:scale-105 transition-transform duration-300 hover:shadow-xl">
+      <h4 class="text-xl font-semibold mb-2 text-green-600 border-b-2 border-green-300 pb-2">West Africa</h4>
+      <p class="text-gray-600 mb-4">Regional committee members focused on bridging the digital divide and fostering regional cooperation.</p>
+      <ul class="list-disc list-inside text-gray-500 text-sm">
+        <li>Regional Economic Bodies</li>
+        <li>Trade Organizations</li>
+      </ul>
+    </div>
+    <div class="bg-white rounded-xl shadow-lg p-6 hover:scale-105 transition-transform duration-300 hover:shadow-xl">
+      <h4 class="text-xl font-semibold mb-2 text-green-600 border-b-2 border-green-300 pb-2">East Africa</h4>
+      <p class="text-gray-600 mb-4">Regional stakeholders driving inclusive digital strategies and infrastructure development.</p>
+      <ul class="list-disc list-inside text-gray-500 text-sm">
+        <li>Regional Leaders</li>
+        <li>Development Agencies</li>
+      </ul>
+    </div>
+    <!-- Add more regions as needed -->
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="bg-gradient-to-r from-green-500 via-teal-400 to-cyan-400 py-16 px-4 text-white text-center">
+  <h2 class="text-3xl font-semibold mb-4">Join the Movement to Bridge the Digital Divide</h2>
+  <p class="mb-8 text-lg max-w-3xl mx-auto">
+    Be part of the regional efforts to accelerate digital inclusion across Africa’s diverse landscapes. Collaborate, lead, and innovate with regional councils to shape Africa’s digital future.
+  </p>
+  <a href="#register" class="bg-white text-green-700 font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-gray-100 transition duration-300 animate-bounce">
+    Get Involved Today
+  </a>
+</section>
+
+{% endblock %}

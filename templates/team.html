@@ -1,0 +1,96 @@
+{% extends "base.html" %} {% block title %}Our Team - ADIA{% endblock %} {%
+block content %}
+<section class="py-12 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-8 text-center">Our Team</h2>
+    <div class="grid md:grid-cols-4 gap-6">
+      {% for member in team %}
+      <div
+        class="bg-white rounded shadow p-4 flex flex-col items-center text-center"
+      >
+        <img
+          src="{{ url_for('static', filename=member.image) }}"
+          class="w-24 h-24 object-cover rounded-full mb-4"
+          alt="{{ member.name }}"
+        />
+        <h3 class="text-xl font-semibold">{{ member.name }}</h3>
+        <p class="text-gray-600">{{ member.role }}</p>
+        <p class="text-gray-500 text-sm">{{ member.country }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Team Section -->
+<section id="team" class="py-12 md:py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-8" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-semibold mb-2">Our Team</h2>
+      <p class="text-gray-600 text-base md:text-lg">
+        Board of Directors, Chief Officers, Regional and National Directors.
+      </p>
+    </div>
+    <div class="grid md:grid-cols-4 gap-6 md:gap-8">
+      <!-- Member 1 -->
+      <div
+        class="bg-gray-50 p-4 md:p-6 rounded shadow flex flex-col items-center"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        <img
+          src="static/img/team/Victor.jpeg"
+          class="w-16 h-16 md:w-24 md:h-24 object-cover rounded-full mb-2"
+          alt="Victor Otieno"
+        />
+        <h4 class="text-xl md:text-2xl font-semibold">Victor Otieno</h4>
+        <p class="text-gray-500 text-sm md:text-base">CEO - Kenya</p>
+      </div>
+      <!-- Member 2 -->
+      <div
+        class="bg-gray-50 p-4 md:p-6 rounded shadow flex flex-col items-center"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <img
+          src="static/img/team/Anisa.jpeg"
+          class="w-16 h-16 md:w-24 md:h-24 object-cover rounded-full mb-2"
+          alt="Anisa Abeytia"
+        />
+        <h4 class="text-xl md:text-2xl font-semibold">Anisa Abeytia</h4>
+        <p class="text-gray-500 text-sm md:text-base">Board Member - USA</p>
+      </div>
+      <!-- Member 3 -->
+      <div
+        class="bg-gray-50 p-4 md:p-6 rounded shadow flex flex-col items-center"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
+        <img
+          src="static/img/team/Patrick.jpeg"
+          class="w-16 h-16 md:w-24 md:h-24 object-cover rounded-full mb-2"
+          alt="Patrick Okot"
+        />
+        <h4 class="text-xl md:text-2xl font-semibold">Patrick Okot</h4>
+        <p class="text-gray-500 text-sm md:text-base">Board Member - Uganda</p>
+      </div>
+      <!-- Member 4 -->
+      <div
+        class="bg-gray-50 p-4 md:p-6 rounded shadow flex flex-col items-center"
+        data-aos="fade-up"
+        data-aos-delay="400"
+      >
+        <img
+          src="static/img/team/Albashir_Ishaq_Ibrahim.png"
+          class="w-16 h-16 md:w-24 md:h-24 object-cover rounded-full mb-2"
+          alt="Albashir Ishaq Ibrahim"
+        />
+        <h4 class="text-xl md:text-2xl font-semibold">
+          Albashir Ishaq Ibrahim
+        </h4>
+        <p class="text-gray-500 text-sm md:text-base">Board Member - Nigeria</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

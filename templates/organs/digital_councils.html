@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block title %}Africa Specialized Multi-Sectoral Digital Council{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-r from-blue-700 via-dark-700 to-purple-600 py-20 px-4 text-white overflow-hidden">
+  <div class="max-w-5xl mx-auto text-center z-10 relative">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 animate-fadeInDown">Africa Specialized Multi-Sectoral Digital Council</h1>
+    <p class="text-lg md:text-xl mb-8 animate-fadeInUp max-w-3xl mx-auto leading-relaxed">
+      A strategic advisory body composed of sectoral experts, government representatives, academia, NGOs, advocacy groups, and international organizations. This council maps and guides Africa’s digital inclusion across key sectors to ensure holistic and sustainable growth.
+    </p>
+    <a href="#about" class="bg-white text-indigo-700 font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-gray-100 transition duration-300 animate-bounce">
+      Learn More
+    </a>
+  </div>
+  <!-- Decorative SVG Waves -->
+  <svg class="absolute bottom-0 left-0 w-full h-40" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#ffffff" fill-opacity="0.2" d="M0,64L48,80C96,96,192,128,288,138.7C384,149,480,139,576,138.7C672,139,768,149,864,160C960,171,1056,181,1152,181.3C1248,181,1344,171,1392,166.7L1440,162L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+  </svg>
+</section>
+
+<!-- About the Council -->
+<section id="about" class="max-w-5xl mx-auto py-16 px-6 bg-gray-50 rounded-lg shadow-lg my-10">
+  <h2 class="text-3xl md:text-4xl font-semibold mb-6 text-center text-indigo-700">About the Africa Specialized Multi-Sectoral Digital Council</h2>
+  <p class="text-gray-700 mb-8 text-lg leading-relaxed text-center px-4 max-w-3xl mx-auto">
+    This council serves as a high-level advisory and strategic body, bringing together experts from diverse sectors, government officials, academia, NGOs, advocacy groups, and international organizations. Its mission is to map out and develop key areas of digital inclusion across Africa, ensuring a coordinated approach that accelerates sustainable growth and innovation.
+  </p>
+  <div class="text-center">
+    <a href="#join" class="bg-indigo-700 text-white font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-indigo-600 transition duration-300">
+      Join the Council
+    </a>
+  </div>
+</section>
+
+<!-- Council Members & Sectors -->
+<section class="max-w-7xl mx-auto py-16 px-6">
+  <h3 class="text-2xl md:text-3xl font-semibold mb-10 text-center text-indigo-700">Key Sectors & Expert Members</h3>
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- Example Sector Card -->
+    <div class="bg-white rounded-xl shadow-lg p-6 hover:scale-105 transition-transform duration-300 hover:shadow-xl">
+      <h4 class="text-xl font-semibold mb-2 text-indigo-600 border-b-2 border-indigo-300 pb-2">Government & Policy Makers</h4>
+      <p class="text-gray-600 mb-4">Leaders from governmental agencies shaping digital policies and regulations for sustainable growth.</p>
+      <ul class="list-disc list-inside text-gray-500 text-sm">
+        <li>Ministries of Digital Transformation</li>
+        <li>Regulatory Authorities</li>
+      </ul>
+    </div>
+    <!-- Repeat for other sectors -->
+    <div class="bg-white rounded-xl shadow-lg p-6 hover:scale-105 transition-transform duration-300 hover:shadow-xl">
+      <h4 class="text-xl font-semibold mb-2 text-indigo-600 border-b-2 border-indigo-300 pb-2">Academia & Research</h4>
+      <p class="text-gray-600 mb-4">Leading universities and research institutions driving innovation and evidence-based policy development.</p>
+      <ul class="list-disc list-inside text-gray-500 text-sm">
+        <li>Technology Universities</li>
+        <li>Research Centers</li>
+      </ul>
+    </div>
+    <div class="bg-white rounded-xl shadow-lg p-6 hover:scale-105 transition-transform duration-300 hover:shadow-xl">
+      <h4 class="text-xl font-semibold mb-2 text-indigo-600 border-b-2 border-indigo-300 pb-2">NGOs & Advocacy</h4>
+      <p class="text-gray-600 mb-4">Organizations advocating for digital rights, inclusion, and community empowerment across Africa.</p>
+      <ul class="list-disc list-inside text-gray-500 text-sm">
+        <li>Digital Rights Groups</li>
+        <li>Community-Based Organizations</li>
+      </ul>
+    </div>
+    <!-- Add more sector cards as needed -->
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="bg-gradient-to-r from-purple-600 via-indigo-600 to-pink-500 py-16 px-4 text-white text-center">
+  <h2 class="text-3xl font-semibold mb-4">Get Involved in Shaping Africa’s Digital Future</h2>
+  <p class="mb-8 text-lg max-w-3xl mx-auto">
+    Join the council or partner with us to drive impactful digital inclusion strategies across sectors and regions. Together, we can accelerate Africa’s digital transformation.
+  </p>
+  <a href="#register" class="bg-white text-indigo-700 font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-gray-100 transition duration-300 animate-bounce">
+    Join Now
+  </a>
+</section>
+
+{% endblock %}

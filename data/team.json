@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Victor Otieno",
+    "role": "Chief Executive Officer",
+    "country": "Kenya",
+    "image": "assets/img/team/Victor.jpeg"
+  },
+  {
+    "name": "Anisa Abeytia",
+    "role": "Board Member",
+    "country": "United States",
+    "image": "assets/img/team/Anisa.jpeg"
+  },
+    {
+        "name": "Ariel Koren",
+        "role": "Board Member",
+        "country": "United States",
+        "image": "assets/img/team/Ariel.jpeg"
+    },
+    {
+        "name": "Megan McCarthy",
+        "role": "Board Member",
+        "country": "United States",
+        "image": "assets/img/team/Megan.jpeg"
+    },
+    {
+        "name": "Sophie Alpert",
+        "role": "Board Member",
+        "country": "United States",
+        "image": "assets/img/team/Sophie.jpeg"
+    }
+]

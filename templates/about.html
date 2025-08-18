@@ -1,0 +1,109 @@
+{% extends "base.html" %} {% block title %}About Us - ADIA{% endblock %} {%
+block content %}
+<!-- About Us -->
+<section id="about" class="py-12 md:py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="grid lg:grid-cols-2 gap-8 items-center">
+      <!-- Video Thumbnail -->
+      <div data-aos="fade-up" class="relative group cursor-pointer">
+        <img
+          src="static/img/Conference.png"
+          alt="Conference"
+          class="w-full rounded shadow-lg"
+        />
+        <a
+          href="https://www.youtube.com/watch?v=n0iC0lcAubA"
+          class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-full transition hover:bg-opacity-70 duration-300 cursor-pointer"
+        >
+          <svg
+            class="w-14 h-14 text-white"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path d="M10 16.5v-9l6 4.5-6 4.5z" />
+          </svg>
+        </a>
+      </div>
+      <!-- About Text -->
+      <div
+        data-aos="fade-up"
+        class="space-y-4 md:space-y-6 text-gray-700 text-base md:text-lg leading-relaxed"
+      >
+        <h3 class="text-3xl md:text-4xl font-semibold mb-4 text-gray-900">
+          About Us
+        </h3>
+        <p>
+          We are a pan-African driven ecosystem organization seeking to bridge
+          the digital divide through inclusive frameworks addressing skills,
+          internet & device access, policy research, advocacy, and marginalized
+          groups' inclusion. Our partnership-centric approach drives digital
+          growth at community and continental levels.
+        </p>
+        <ul class="list-disc list-inside space-y-2 md:space-y-3 mt-4 md:mt-6">
+          <li>
+            <strong>Learning Institutions & Partners:</strong> Universities,
+            colleges, vocational institutions, and schools providing digital
+            skills training, capacity building, and research collaborations.
+          </li>
+          <li>
+            <strong>Corporate Partners:</strong> Engaged in digital capacity
+            building, resilience programs, and services.
+          </li>
+          <li>
+            <strong>Governments:</strong> Policy formulation, digital inclusion
+            events, and advocacy.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Counter -->
+<section class="py-12 md:py-16 bg-white border-t border-gray-200">
+  <div
+    class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-6 md:gap-8 text-center"
+  >
+    <!-- Stat 1 -->
+    <div class="p-4 md:p-6 bg-gray-100 rounded shadow" data-aos="fade-up">
+      <div class="text-3xl md:text-4xl font-extrabold text-blue-900">
+        <span class="counter" data-target="54">0</span>
+      </div>
+      <p class="mt-2 text-gray-600 text-sm md:text-base">African Countries</p>
+    </div>
+    <!-- Stat 2 -->
+    <div
+      class="p-4 md:p-6 bg-gray-100 rounded shadow"
+      data-aos="fade-up"
+      data-aos-delay="100"
+    >
+      <div class="text-3xl md:text-4xl font-extrabold text-blue-900">
+        <span class="counter" data-target="25">0</span>
+      </div>
+      <p class="mt-2 text-gray-600 text-sm md:text-base">National Directors</p>
+    </div>
+    <!-- Stat 3 -->
+    <div
+      class="p-4 md:p-6 bg-gray-100 rounded shadow"
+      data-aos="fade-up"
+      data-aos-delay="200"
+    >
+      <div class="text-3xl md:text-4xl font-extrabold text-blue-900">
+        <span class="counter" data-target="5">0</span>
+      </div>
+      <p class="mt-2 text-gray-600 text-sm md:text-base">Regional Directors</p>
+    </div>
+    <!-- Stat 4 -->
+    <div
+      class="p-4 md:p-6 bg-gray-100 rounded shadow"
+      data-aos="fade-up"
+      data-aos-delay="300"
+    >
+      <div class="text-3xl md:text-4xl font-extrabold text-blue-900">
+        <span class="counter" data-target="6">0</span>
+      </div>
+      <p class="mt-2 text-gray-600 text-sm md:text-base">Chambers</p>
+    </div>
+  </div>
+</section>
+{% endblock %}
